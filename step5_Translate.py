@@ -20,6 +20,7 @@ output_folder_path = os.path.join(sys.argv[2],filename+'.txt')
 out_file = open(output_folder_path, 'w')
 #######################################################################################   
 
+################# Main loop #################
 for line in in_file:                        # For each line in the file
 
     if line.startswith('>'):                # If the line is a header line, then do
@@ -30,6 +31,7 @@ for line in in_file:                        # For each line in the file
         pro_sqn = str (DNA_sqn.translate()) # Use the Bio Python to translate the DNA to protein
         out_file.write(hdr)
         out_file.write("%s\n"%pro_sqn)      # Write the protein sequence
+##############################################
 
 in_file.close()         # closing input file
 out_file.close()        # closing output file
