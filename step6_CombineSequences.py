@@ -18,6 +18,7 @@ output_folder_path_1 = os.path.join(sys.argv[2],'organism1_sequences.txt')  # Re
 output_folder_path_2 = os.path.join(sys.argv[2],'organism2_sequences.txt')  # Refer to this output file
 #######################################################################################
 
+################# Main loop #################
 for line in in_file:                    # For each line in the file
     
     if line.startswith('>'):            # If the line is a header line, then do
@@ -40,3 +41,5 @@ out_file_2 = open(output_folder_path_2, 'a')    # Open the file to append instea
 out_file_2.write("%s\n"%hdr_2)                  # Write the header for the homologous organism in focus
 out_file_2.write("%s\n"%DNA_sqn2)               # Write their cooresponding prot sequence
 out_file_2.close()      # closing output file
+
+##############################################
